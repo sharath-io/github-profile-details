@@ -3,10 +3,13 @@ const btnEl = document.getElementById('btn')
 
 
 
-function extractUserDetails(){
+async function extractUserDetails(){
     const str = 'https://api.github.com/users/' + inpEl.value;
-    console.log(str);
-    
+    const res = await fetch(str);
+    const data = await res.json();
+    console.log(data)
+    console.log('Location: ',data.location)
+    console.log('Twitter userName : ',data.twitter_username)
 }
 
 btnEl.addEventListener('click', extractUserDetails)

@@ -1,0 +1,13 @@
+*{
+    text-align: center;
+}
+
+p{
+    font-size: 25px;
+}
+
+input{
+    font-size: 25px;
+    border-radius: 12px;
+    width: 500px;
+}
